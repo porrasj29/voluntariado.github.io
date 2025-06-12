@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Semillas de Cambio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f0; 
+    color: #4b3c2a; 
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; 
+  }
+  h1 {
+    color: #2e5d34;
+    text-align: center;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+    margin-bottom: 24px;
+  }
+  h2 {
+    color: #2e5d34; 
+    text-align: center; 
+  }
+  .carrusel {
+    position: relative;
+    width: 90%;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 5px solid #4b3c2a;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    border-radius: 10px;
+  }
+  .slides img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    color: #4b3c2a;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 10;
+  }
+  .arrow:hover {
+    background: #2e5d34;
+    color: white;
+  }
+  .arrow-left {
+    left: 15px;
+  }
+  .arrow-right {
+    right: 15px;
+  }
+  p {
+    text-align: center;
+  }
+  img#servicios {
+    max-width: 90%;
+    border-radius: 10px;
+    display: block;
+    margin: 30px auto;
+  }
+  .f {
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #ecbc8f;
+    cursor: pointer;
+  }
+  .f:hover {
+    background-color: #c89668;
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(75, 61, 61, 0.3);
+    color: #fff;
+  }
+  .btn {
+    background-color: #d5f0d3;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    overflow-x: hidden;
+  }
+  div button {
+    background-color: #d7c3b3;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin: 0 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #4b3d3d;
+  }
+  #a {
+    color: #3b60a9;
+    text-align: center; 
+    font-weight: bolder;
+    font-size: 140%;
+  }
+  .facebook{
+    display: inline-block;
+    transition: transform 0.3s; 
+}
+.facebook:hover {
+    transform: scale(1.1); 
+}
+.facebook-icono {
+    width: 50px; 
+    height: auto; 
+}
+img{
+   width: 50%;
+}
+
+</style>
+</head>
+<body>
+  <h1>Semillas de Cambio</h1>
+  <div style="text-align: center;" class="btn">
+   <button class="f"onclick="window.open('dia 1.html', '_blank')">Día 1</button>
+   <button class="f"onclick="window.open('dia 2.html', '_blank')">Día 2</button>
+   <button class="f"onclick="window.open('dia 3.html', '_blank')">Día 3</button>
+   <button class="f"onclick="window.open('dia 4.html', '_blank')">Día 4</button>
+   <button class="f"onclick="window.open('dia 5.html', '_blank')">Día 5</button>
+ </div>
+  <div class="carrusel" id="carousel">
+    <div class="slides" id="slides">
+      <img src="ca1.jpg" alt="Imagen del voluntariado en Hogar San Vicente - 1" />
+      <img src="ca3.jpg" alt="Imagen del voluntariado en Hogar San Vicente - 2" />
+      <img src="ca4.jpg" alt="Imagen del voluntariado en Hogar San Vicente - 3" />
+      <img src="ca5.jpg" alt="Imagen del voluntariado en Hogar San Vicente - 4" />
+    </div>
+    <button class="arrow arrow-left" aria-label="Imagen anterior" id="prevBtn">&#10094;</button>
+    <button class="arrow arrow-right" aria-label="Imagen siguiente" id="nextBtn">&#10095;</button>
+  </div>
+  
+  <p id="a">VOLUNTARIADO EN HOGAR SAN VICENTE</p>
+  <p id="a">RESIDENCIA PARA MUJERES DE LA TERCERA EDAD</p>
+  <p id="a">VISIÓN</p>
+  <p>Somos una institución que trabaja promoviendo el desarrollo integral de personas en situación vulnerable, en este caso a adultos mayores, con proyectos transformadores autosustentables e innovadoras, que dan respuesta a las necesidades de la comunidad.</p>
+  <p id="a">MISIÓN</p>
+  <p>Voluntarias Vicentinas son mujeres con vocación de servicio que trabajan organizadamente contra las formas de pobreza y de exclusión a través de iniciativas y proyectos transformadores para el desarrollo integral de las personas más vulnerables de la sociedad.</p>
+  <p id="a">SERVICIOS QUE OFRECEN</p>
+  <p>✔Cuidado hacia el adulto mayor</p>
+  <p>✔Comidas completas</p>
+  <p>✔Servicio de limpieza</p>
+  <p>✔Enfermeras las 24 hrs del día</p>
+  <p>✔Actividades variadas</p>
+  <p>✔Estabilidad y bienestar</p>
+  <img id="servicios" src="servicios.jpg"/>
+  <p>Nosotros elegimos al Hogar San Vicente ya que nos llamaron la atención sus espacios y los servicios que le brindaban a las residentes, también vimos la oportunidad de sacar lo mejor de nosotros y proponer ideas nuevas a las actividades del lugar intentando con esto crear un impacto positivo en la rutina y visión de las residentes.</p>
+  <p>El voluntariado en un asilo es una experiencia profundamente humana y enriquecedora, tanto para quienes reciben tu compañía como para ti mismo. Muchas personas mayores viven en soledad, y una simple conversación, una sonrisa o el compartir un rato de juegos o lectura puede significarles el mundo. Al dedicar parte de tu tiempo a escucharlos, aprender de sus historias y brindarles afecto, generas un impacto emocional duradero en sus vidas. Además, esta experiencia fomenta la empatía, el respeto por otras generaciones y el valor de la presencia. Ser voluntario en un asilo no es solo dar, es también recibir lecciones de vida que no se aprenden en ningún otro lugar.</p>
+  
+  <h2>Informacion del Hogar San Vicente</h2>
+  <p>Hogar San Vicente: refugio cálido para mujeres mayores, con cuidados y actividades personalizadas.</p>
+  <p>General Rincón 4701, Chihuahua, México</p>
+  <p>614 424 0815</p>
+  <p>hogarsanvicentechih@gmail.com</p>
+  <a href="https://www.facebook.com/share/18hDXWktzn/" class="facebook">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="facebook-icono">
+</a>
+
+  <script>
+    (function(){
+      const slides = document.getElementById('slides');
+      const totalSlides = slides.children.length;
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const translateXPercent = -(currentIndex * 100);
+        slides.style.transform = `translateX(${translateXPercent}%)`;
+      }
+
+      document.getElementById('prevBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      });
+
+      document.getElementById('nextBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      });
+
+      updateCarousel();
+    })();
+  </script>
+</body>
+</html>
+
